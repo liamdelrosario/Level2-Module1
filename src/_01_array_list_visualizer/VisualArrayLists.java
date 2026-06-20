@@ -11,7 +11,7 @@ import _01_array_list_visualizer.data.ArrayList;
 public class VisualArrayLists implements ActionListener {
 	Timer timer;
 	JFrame frame = new JFrame();
-	
+
 	ArrayList<String> list = new ArrayList<String>();
 
 	public void addThingsToList() {
@@ -21,7 +21,7 @@ public class VisualArrayLists implements ActionListener {
 		list.add("Ionization");
 		list.add("Flavinium");
 		list.add("Compensating");
-		
+
 		// 2. Set one item in our list to be something different
 		list.set(1, "Jargonistically");
 		// 3. Remove something from our list
@@ -30,20 +30,30 @@ public class VisualArrayLists implements ActionListener {
 		System.out.println(list.size());
 		// 5. Check if our list contains a specific thing of your choice
 		//	  and print whether it is in the list or not.
-		String s = list.get(3);
-		if(s.equals("Flavinum")) {
+		String s = list.get(1);
+		if(s.equals("Jargonistically")) {
 			System.out.println("exist");
 		}else {
 			System.out.println("Non-existent");
 		}
+		String ss = list.get(1);
+		System.out.println(ss);
+
+		for (int i = 0; i <= 3;i++) {
+			list.remove(0);
+		}
+
+		System.out.println(list.size());
+
 		// 6. Get a specific item from our list and print it out
-		
+
 		// 7. Clear our list of all items
-		
+
 		// 8. Print the size of our list again
+
 	}
-	
-	
+
+
 	/*
 	 * ------------DONT CHANGE ANYTHING BELOW THIS LINE-----------------------------------------
 	 */
