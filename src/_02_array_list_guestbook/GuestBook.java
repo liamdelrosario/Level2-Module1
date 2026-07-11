@@ -34,6 +34,7 @@ public class GuestBook implements ActionListener {
 		panel.add(addName);
 		panel.add(viewNames);
 		addName.addActionListener(this);
+		viewNames.addActionListener(this);
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
@@ -47,15 +48,17 @@ public class GuestBook implements ActionListener {
 		JButton buttonPressed = (JButton) e.getSource();	
 		if(addName==buttonPressed) {
 			System.out.println("Yeah I did wrote it in Github");
-			String input = JOptionPane.showInputDialog("Enter a new ");
+			String input = JOptionPane.showInputDialog("Enter a new input");
 			list.add(input);
-			for(int i=0; i<list.size(); i++) {
-				String s= list.get(i);
-				System.out.println(s);
-			}
+		
 		}
 		if(viewNames==buttonPressed) {
-			
+			System.out.println("this works");	
+			for(int i=0; i<list.size(); i++) {
+				String s= list.get(i);
+				int o =i+1;
+				System.out.println("Guest #"+o+": "+s);
+			}
 		}
 	}
 }
